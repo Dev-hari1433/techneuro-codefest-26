@@ -1,6 +1,7 @@
 import React from 'react';
 import { Cpu, ArrowUpRight, Mail, Phone, MapPin, Heart } from 'lucide-react';
 import { SYMPOSIUM_INFO } from '../data/eventsData';
+import StarfieldBackground from './StarfieldBackground';
 
 function WhatsAppIcon({ className = "w-3.5 h-3.5" }) {
   return (
@@ -17,8 +18,9 @@ function WhatsAppIcon({ className = "w-3.5 h-3.5" }) {
 
 export default function Footer({ onScrollTo, onOpenRegister, onDownloadRulebook }) {
   return (
-    <footer className="w-full bg-[#100804] text-stone-300 pt-16 pb-12 px-4 sm:px-8 border-t border-white/10">
-      <div className="max-w-7xl mx-auto">
+    <footer className="w-full bg-[#100804] text-stone-300 pt-16 pb-12 px-4 sm:px-8 border-t border-white/10 relative overflow-hidden">
+      <StarfieldBackground density={20} showSparkles={false} />
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
           
           {/* Brand Info */}
@@ -119,7 +121,7 @@ export default function Footer({ onScrollTo, onOpenRegister, onDownloadRulebook 
               Official Helpline &amp; WhatsApp
             </h4>
             <p className="text-xs text-stone-400 leading-relaxed">
-              Direct line to our Student Convener &amp; Faculty mentor desk for squad verification, rulebooks, and queries.
+              Direct line to our President &amp; Faculty mentor desk for squad verification, rulebooks, and queries.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-2.5">

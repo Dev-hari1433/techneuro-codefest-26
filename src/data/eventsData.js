@@ -6,11 +6,11 @@ export const SYMPOSIUM_INFO = {
   department: "Department of Computer Science with Artificial Intelligence",
   date: "October 14, 2026",
   time: "09:00 AM – 05:00 PM IST",
-  venue: "CS & AI Innovation Block & Auditorium, Campus Central",
+  venue: "DRBCCC Hindu College, Pattabiram",
   regDeadline: "October 12, 2026 • 11:59 PM IST",
   departmentCap: "Strictly 1 Team per Department across all events",
   convenerName: "Ganesh Kumar",
-  convenerRole: "Student Convener (CSAI)",
+  convenerRole: "President (CSAI)",
   contactPhone: "6369230106",
   contactWhatsapp: "https://wa.me/916369230106?text=Hi%20Ganesh%20Kumar%2C%20I%20have%20a%20query%20regarding%20TechNeuro%20Codefest%2726",
 };
@@ -84,7 +84,7 @@ export const EVENTS_DATA = [
       "Judges' decisions on disputed interpretations are final."
     ],
     coordinators: [
-      { name: "Ganesh Kumar", role: "Student Convener (CSAI)", contact: "6369230106" }
+      { name: "Ganesh Kumar", role: "President (CSAI)", contact: "6369230106" }
     ]
   },
   {
@@ -138,7 +138,7 @@ export const EVENTS_DATA = [
       "Final 2-minute elevator pitch to the jury panel (10%)"
     ],
     coordinators: [
-      { name: "Ganesh Kumar", role: "Student Convener (CSAI)", contact: "6369230106" }
+      { name: "Ganesh Kumar", role: "President (CSAI)", contact: "6369230106" }
     ]
   },
   {
@@ -192,7 +192,7 @@ export const EVENTS_DATA = [
       "Clarity of Concept Explanation to Judges (15%)"
     ],
     coordinators: [
-      { name: "Ganesh Kumar", role: "Student Convener (CSAI)", contact: "6369230106" }
+      { name: "Ganesh Kumar", role: "President (CSAI)", contact: "6369230106" }
     ]
   },
   {
@@ -245,7 +245,7 @@ export const EVENTS_DATA = [
       "Hygiene, Cleanliness of Station & Waste Management (20%)"
     ],
     coordinators: [
-      { name: "Ganesh Kumar", role: "Student Convener (CSAI)", contact: "6369230106" }
+      { name: "Ganesh Kumar", role: "President (CSAI)", contact: "6369230106" }
     ]
   },
   {
@@ -298,7 +298,7 @@ export const EVENTS_DATA = [
       "Winner is the squad with the highest number of valid items returned."
     ],
     coordinators: [
-      { name: "Ganesh Kumar", role: "Student Convener (CSAI)", contact: "6369230106" }
+      { name: "Ganesh Kumar", role: "President (CSAI)", contact: "6369230106" }
     ]
   }
 ];
@@ -318,7 +318,7 @@ export const MARQUEE_ITEMS = [
   "Technical Mehndi (1 Member • Circuits & Henna)",
   "Cooking Without Fire (90m • Zero Heat)",
   "Treasure Hunt (20 Cryptic Clues)",
-  "Official Student Convener: Ganesh Kumar (6369230106)",
+  "Official President: Ganesh Kumar (6369230106)",
   "Department Championship Rolling Trophy",
   "Strictly 1 Team per Department",
   "Live Microsoft Word Prompt Log Submission",
@@ -348,6 +348,6 @@ export const FAQ_LIST = [
   },
   {
     question: "Who is the official coordinator to contact for queries?",
-    answer: "The official Student Convener is Ganesh Kumar (Department of Computer Science with Artificial Intelligence). You can reach him directly on WhatsApp or call at 6369230106."
+    answer: "The official President is Ganesh Kumar (Department of Computer Science with Artificial Intelligence). You can reach him directly on WhatsApp or call at 6369230106."
   }
 ];

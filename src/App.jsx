@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 import EventDrawer from './components/EventDrawer';
 import RegistrationModal from './components/RegistrationModal';
 import RulebookDownloadModal from './components/RulebookDownloadModal';
+import CursorTrail from './components/CursorTrail';
 import { EVENTS_DATA } from './data/eventsData';
 
 export default function App() {
@@ -45,9 +46,9 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAF7F2] text-stone-900 flex flex-col selection:bg-copper-500 selection:text-white">
-      {/* Top Announcement Bar */}
-      <TopBanner onOpenRegister={() => handleOpenRegister('ai-avengers')} />
+    <div className="min-h-screen bg-[#FAF7F2] text-stone-900 flex flex-col selection:bg-copper-500 selection:text-white relative">
+      {/* Shiny Particle Cursor Trail (Interactive across the entire page) */}
+      <CursorTrail />
 
       {/* Floating Dark Glassmorphic Navbar */}
       <Navbar

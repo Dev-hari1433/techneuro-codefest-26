@@ -11,7 +11,7 @@ export default function AutoScrollMarquee({ onOpenRegister, onSelectEvent }) {
     { label: "Technical Mehndi (Solo 1 Member)", icon: <Palette className="w-3.5 h-3.5 text-amber-600" /> },
     { label: "Cooking Without Fire (Zero Heat)", icon: <Flame className="w-3.5 h-3.5 text-amber-600" /> },
     { label: "Treasure Hunt (20 Clues)", icon: <Compass className="w-3.5 h-3.5 text-amber-600" /> },
-    { label: "Student Convener: Ganesh Kumar (6369230106)", icon: <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" /> },
+    { label: "President: Ganesh Kumar (6369230106)", icon: <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" /> },
   ];
 
   const row2 = [

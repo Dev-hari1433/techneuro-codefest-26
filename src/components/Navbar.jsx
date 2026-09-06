@@ -4,23 +4,43 @@ import { SYMPOSIUM_INFO } from '../data/eventsData';
 
 export default function Navbar({ onOpenRegister, onScrollTo }) {
   const [scrolled, setScrolled] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > 70) {
+        if (currentScrollY > lastScrollY + 6) {
+          setVisible(false); // scrolling down -> hide to prevent blocking content
+        } else if (currentScrollY < lastScrollY - 6) {
+          setVisible(true); // scrolling up -> reveal
+        }
+      } else {
+        setVisible(true); // at the top -> always visible
+      }
+
+      setScrolled(currentScrollY > 20);
+      setLastScrollY(currentScrollY);
     };
-    window.addEventListener('scroll', handleScroll);
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   return (
-    <header className="fixed top-8 sm:top-10 left-0 right-0 z-40 px-4 sm:px-8 pointer-events-none transition-all duration-300">
+    <header
+      className={`fixed top-4 sm:top-6 left-0 right-0 z-40 px-3 sm:px-8 pointer-events-none transition-all duration-300 ease-out ${
+        visible ? 'translate-y-0 opacity-100' : '-translate-y-28 opacity-0'
+      }`}
+    >
       <div
-        className={`max-w-7xl mx-auto rounded-full px-5 py-2.5 sm:py-3 pointer-events-auto transition-all duration-300 flex items-center justify-between ${
+        className={`max-w-7xl mx-auto rounded-full px-4 sm:px-6 py-2 sm:py-2.5 pointer-events-auto transition-all duration-300 flex items-center justify-between ${
           scrolled
-            ? 'bg-[#1A120B]/90 backdrop-blur-xl border border-white/15 shadow-2xl shadow-black/50'
-            : 'bg-[#1A120B]/60 backdrop-blur-md border border-white/10'
+            ? 'bg-[#1A120B]/90 backdrop-blur-xl border border-white/15 shadow-xl shadow-black/40'
+            : 'bg-[#1A120B]/70 backdrop-blur-md border border-white/10 shadow-md'
         }`}
       >
         {/* Left Navigation Links */}

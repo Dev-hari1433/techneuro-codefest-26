@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Copy, Check, ExternalLink, Sparkles, Clock, MessageSquareQuote, ShieldCheck, ArrowRight } from 'lucide-react';
 import { SYMPOSIUM_INFO } from '../data/eventsData';
+import StarfieldBackground from './StarfieldBackground';
 
 function WhatsAppIcon({ className = "w-4 h-4" }) {
   return (
@@ -31,6 +32,9 @@ export default function ContactSection() {
       id="contact"
       className="relative w-full bg-[#120A05] text-white py-20 px-4 sm:px-8 overflow-hidden border-t border-white/10"
     >
+      {/* Starfield & Sparkling Particles Background */}
+      <StarfieldBackground density={25} showSparkles={true} />
+
       {/* Subtle Warm Amber Ambient Vignette */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-copper-600/10 rounded-full blur-[140px] pointer-events-none" />
 
@@ -40,7 +44,7 @@ export default function ContactSection() {
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 text-[11px] font-semibold uppercase tracking-wider mb-3">
             <WhatsAppIcon className="w-3.5 h-3.5 fill-current" />
-            <span>Event Convener Desk</span>
+            <span>President Desk</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-display font-extrabold tracking-tight text-white">
             Have questions? Connect with our team
@@ -71,7 +75,7 @@ export default function ContactSection() {
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" title="Available for Inquiries" />
                 </div>
                 <p className="text-xs text-stone-400">
-                  Student Convener • Dept of Computer Science with Artificial Intelligence
+                  President • Dept of Computer Science with Artificial Intelligence
                 </p>
               </div>
             </div>

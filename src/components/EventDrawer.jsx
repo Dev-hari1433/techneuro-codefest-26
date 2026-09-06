@@ -281,7 +281,7 @@ export default function EventDrawer({ event, isOpen, onClose, onOpenRegister }) 
               {activeSubTab === 'coordinators' && (
                 <div className="space-y-4">
                   <p className="text-xs text-stone-400">
-                    Official Student Convener for {event.title} &amp; TechNeuro Codefest'26:
+                    Official President for {event.title} &amp; TechNeuro Codefest'26:
                   </p>
                   
                   <div className="p-5 rounded-2xl bg-white/5 border border-white/15 space-y-4">

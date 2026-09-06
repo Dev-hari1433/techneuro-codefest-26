@@ -1,7 +1,8 @@
 import React from 'react';
-import { ArrowRight, Sparkles, CheckCircle2, Shield, Trophy, Users, Flame, ChevronRight, Phone } from 'lucide-react';
+import { ArrowRight, Sparkles, CheckCircle2, Shield, Trophy, Users, Flame, ChevronRight, Phone, Cpu, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { SYMPOSIUM_INFO } from '../data/eventsData';
+import StarfieldBackground from './StarfieldBackground';
 
 export default function Hero({ onOpenRegister, onSelectEvent, onScrollTo }) {
   return (
@@ -9,6 +10,9 @@ export default function Hero({ onOpenRegister, onSelectEvent, onScrollTo }) {
       id="hero"
       className="relative w-full bg-gradient-to-b from-[#140C07] via-[#1A120B] to-[#241710] text-white pt-32 sm:pt-40 pb-20 sm:pb-28 px-4 sm:px-8 overflow-hidden"
     >
+      {/* Starfield Glowing Particles & Shimmering Sparkles */}
+      <StarfieldBackground density={50} showSparkles={true} />
+
       {/* Warm Ambient Glow Highlights */}
       <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-copper-600/15 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-amber-700/10 rounded-full blur-[120px] pointer-events-none" />
@@ -120,23 +124,27 @@ export default function Hero({ onOpenRegister, onSelectEvent, onScrollTo }) {
             </div>
           </motion.div>
 
-          {/* Right Column: Hero Imagery with Floating Glass Chips Card */}
+          {/* Right Column: Full-Height Beautifully Blended Hero Artwork */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-5 relative"
           >
-            {/* Decorative Warm Back-Drop Card Frame */}
+            {/* Ambient Glow Aura */}
+            <div className="absolute -inset-4 bg-gradient-to-tr from-cyan-500/20 via-amber-400/15 to-copper-500/20 rounded-[36px] blur-2xl pointer-events-none" />
+
+            {/* Luxury Framed Container Taking Full Space */}
             <div className="relative rounded-[32px] overflow-hidden border border-white/15 shadow-2xl bg-gradient-to-b from-[#2E1E15] to-[#1A120B]">
               <img
-                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=85"
-                alt="TechNeuro student competitor in flow state"
-                className="w-full h-[460px] sm:h-[540px] object-cover object-center filter saturate-[0.95] contrast-[1.05]"
+                src="/images/hero-ai-human.png"
+                alt="AI and Human Intellect Symbiosis — TechNeuro Codefest'26"
+                className="w-full h-[460px] sm:h-[540px] object-cover object-center filter saturate-[1.02] contrast-[1.02]"
               />
 
-              {/* Ambient gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#140C07]/70 via-transparent to-black/20 pointer-events-none" />
+              {/* Ambient Blending Gradient Overlays */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#140C07]/85 via-transparent to-black/20 pointer-events-none" />
+              <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#140C07] to-transparent pointer-events-none" />
             </div>
           </motion.div>
 

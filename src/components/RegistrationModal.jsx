@@ -635,7 +635,7 @@ export default function RegistrationModal({ isOpen, onClose, initialEventId }) {
                   </div>
                 )}
                 <div className="flex justify-between pt-1">
-                  <span className="text-stone-500 font-medium">Student Convener Helpline</span>
+                  <span className="text-stone-500 font-medium">President Helpline</span>
                   <a
                     href={SYMPOSIUM_INFO.contactWhatsapp}
                     target="_blank"
